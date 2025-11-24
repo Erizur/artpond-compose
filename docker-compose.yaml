@@ -1,7 +1,7 @@
 services:
   backend:
     container_name: "backend"
-    image: "erizur/artpond:latest"
+    image: "erizur/artpond:main"
     env_file: back.env
     ports:
       - "8008:8080"
