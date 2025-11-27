@@ -1,4 +1,14 @@
 services:
+  frontend:
+    container_name: "frontend"
+    image: "erizur/artpond-frontend:latest"
+    env_file: "front.env"
+    ports:
+      - "3300:3000"
+    depends_on:
+      - "backend"
+    restart: "unless-stopped"
+    
   backend:
     container_name: "backend"
     image: "erizur/artpond:main"
