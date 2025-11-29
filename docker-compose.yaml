@@ -1,7 +1,7 @@
 services:
   frontend:
     container_name: "frontend"
-    image: "erizur/artpond-frontend:latest"
+    image: "erizur/artpond-frontend:classic"
     env_file: "front.env"
     ports:
       - "3300:3000"
@@ -11,7 +11,7 @@ services:
     
   backend:
     container_name: "backend"
-    image: "erizur/artpond:main"
+    image: "erizur/artpond:frontdeploy"
     env_file: back.env
     ports:
       - "8008:8080"
